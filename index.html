@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -21,14 +20,13 @@
             min-height: 100vh;
         }
 
-        /* MENU */
         header {
             width: 100%;
             padding: 20px 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: white;
+            background: #fff;
             border-bottom: 1px solid #eee;
         }
 
@@ -54,7 +52,6 @@
             color: #1a73e8;
         }
 
-        /* PRINCIPAL */
         main {
             max-width: 1000px;
             margin: auto;
@@ -69,7 +66,6 @@
         .hero h1 {
             font-size: 48px;
             margin-bottom: 15px;
-            color: #202124;
         }
 
         .hero h1 span {
@@ -79,19 +75,20 @@
         .hero p {
             color: #5f6368;
             font-size: 18px;
+            line-height: 1.6;
             margin-bottom: 30px;
         }
 
-        /* PESQUISA */
         .search {
             max-width: 600px;
             margin: auto;
             display: flex;
-            background: white;
+            align-items: center;
+            background: #fff;
             border: 1px solid #dfe1e5;
             border-radius: 30px;
             padding: 5px 8px 5px 20px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
         }
 
         .search input {
@@ -99,12 +96,13 @@
             border: none;
             outline: none;
             font-size: 16px;
+            background: transparent;
         }
 
         .search button {
             border: none;
             background: #1a73e8;
-            color: white;
+            color: #fff;
             padding: 12px 20px;
             border-radius: 25px;
             cursor: pointer;
@@ -115,7 +113,6 @@
             background: #1557b0;
         }
 
-        /* BOTÕES */
         .buttons {
             margin-top: 25px;
             display: flex;
@@ -133,7 +130,7 @@
 
         .primary {
             background: #1a73e8;
-            color: white;
+            color: #fff;
         }
 
         .primary:hover {
@@ -141,7 +138,7 @@
         }
 
         .secondary {
-            background: white;
+            background: #fff;
             color: #1a73e8;
             border: 1px solid #dadce0;
         }
@@ -150,7 +147,6 @@
             background: #f1f3f4;
         }
 
-        /* CARDS */
         .cards {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -158,7 +154,7 @@
         }
 
         .card {
-            background: white;
+            background: #fff;
             padding: 30px;
             border-radius: 15px;
             border: 1px solid #eee;
@@ -167,7 +163,7 @@
 
         .card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
         }
 
         .card h2 {
@@ -180,10 +176,9 @@
             line-height: 1.6;
         }
 
-        /* LISTA */
         .content {
             margin-top: 50px;
-            background: white;
+            background: #fff;
             padding: 30px;
             border-radius: 15px;
             border: 1px solid #eee;
@@ -193,23 +188,27 @@
             margin-bottom: 15px;
         }
 
+        .content p {
+            color: #5f6368;
+            line-height: 1.7;
+            margin-bottom: 8px;
+        }
+
         ul {
             padding-left: 20px;
             color: #5f6368;
             line-height: 2;
         }
 
-        /* RODAPÉ */
         footer {
             text-align: center;
             padding: 30px;
             color: #777;
             border-top: 1px solid #eee;
-            background: white;
+            background: #fff;
             margin-top: 50px;
         }
 
-        /* CELULAR */
         @media (max-width: 700px) {
             header {
                 padding: 20px;
@@ -230,13 +229,20 @@
             .buttons {
                 flex-direction: column;
             }
+
+            .btn {
+                text-align: center;
+            }
+
+            .search {
+                width: 100%;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <!-- MENU -->
     <header>
         <div class="logo">pazTh7</div>
 
@@ -248,10 +254,8 @@
         </nav>
     </header>
 
-    <!-- CONTEÚDO -->
     <main>
 
-        <!-- INÍCIO -->
         <section class="hero" id="inicio">
 
             <h1>Olá, <span>pazTh7!</span></h1>
@@ -261,7 +265,6 @@
                 desenvolvido para aprender HTML, CSS e JavaScript.
             </p>
 
-            <!-- PESQUISA -->
             <div class="search">
                 <input
                     type="text"
@@ -274,13 +277,13 @@
                 </button>
             </div>
 
-            <!-- BOTÕES -->
             <div class="buttons">
 
                 <a
                     class="btn primary"
                     href="https://github.com/Thales1301"
                     target="_blank"
+                    rel="noopener noreferrer"
                 >
                     Ver GitHub
                 </a>
@@ -296,7 +299,6 @@
 
         </section>
 
-        <!-- CARDS -->
         <section class="cards" id="projeto">
 
             <div class="card">
@@ -325,7 +327,6 @@
 
         </section>
 
-        <!-- EXEMPLOS -->
         <section class="content" id="exemplos">
 
             <h2>Exemplos do projeto</h2>
@@ -345,49 +346,37 @@
 
         </section>
 
-        <!-- CÓDIGOS -->
         <section class="content">
 
             <h2>Entidades HTML</h2>
 
-            <p>
-                &lt; significa menor que
-            </p>
-
-            <p>
-                &gt; significa maior que
-            </p>
-
-            <p>
-                &amp; representa o símbolo &
-            </p>
+            <p>&lt; significa menor que</p>
+            <p>&gt; significa maior que</p>
+            <p>&amp; representa o símbolo &amp;</p>
 
         </section>
 
     </main>
 
-    <!-- RODAPÉ -->
     <footer id="github">
         © 2026 pazTh7 — Projeto HTML
     </footer>
 
-    <!-- JAVASCRIPT -->
     <script>
-
         function pesquisar() {
+            const texto = document
+                .getElementById("pesquisa")
+                .value
+                .trim();
 
-            const texto = document.getElementById("pesquisa").value;
-
-            if (texto.trim() === "") {
+            if (texto === "") {
                 alert("Digite alguma coisa para pesquisar!");
-            } else {
-                alert("Você pesquisou por: " + texto);
+                return;
             }
 
+            alert("Você pesquisou por: " + texto);
         }
-
     </script>
 
 </body>
 </html>
-```
