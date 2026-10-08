@@ -1,0 +1,393 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>pazTh7 — Projeto HTML</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f8f9fa;
+            color: #202124;
+            min-height: 100vh;
+        }
+
+        /* MENU */
+        header {
+            width: 100%;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            border-bottom: 1px solid #eee;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #1a73e8;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #5f6368;
+            font-size: 15px;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            color: #1a73e8;
+        }
+
+        /* PRINCIPAL */
+        main {
+            max-width: 1000px;
+            margin: auto;
+            padding: 80px 20px;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+            color: #202124;
+        }
+
+        .hero h1 span {
+            color: #1a73e8;
+        }
+
+        .hero p {
+            color: #5f6368;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        /* PESQUISA */
+        .search {
+            max-width: 600px;
+            margin: auto;
+            display: flex;
+            background: white;
+            border: 1px solid #dfe1e5;
+            border-radius: 30px;
+            padding: 5px 8px 5px 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .search input {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: 16px;
+        }
+
+        .search button {
+            border: none;
+            background: #1a73e8;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .search button:hover {
+            background: #1557b0;
+        }
+
+        /* BOTÕES */
+        .buttons {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .btn {
+            padding: 12px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 15px;
+            transition: 0.2s;
+        }
+
+        .primary {
+            background: #1a73e8;
+            color: white;
+        }
+
+        .primary:hover {
+            background: #1557b0;
+        }
+
+        .secondary {
+            background: white;
+            color: #1a73e8;
+            border: 1px solid #dadce0;
+        }
+
+        .secondary:hover {
+            background: #f1f3f4;
+        }
+
+        /* CARDS */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #eee;
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+
+        .card h2 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #5f6368;
+            line-height: 1.6;
+        }
+
+        /* LISTA */
+        .content {
+            margin-top: 50px;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #eee;
+        }
+
+        .content h2 {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            padding-left: 20px;
+            color: #5f6368;
+            line-height: 2;
+        }
+
+        /* RODAPÉ */
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #777;
+            border-top: 1px solid #eee;
+            background: white;
+            margin-top: 50px;
+        }
+
+        /* CELULAR */
+        @media (max-width: 700px) {
+            header {
+                padding: 20px;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <header>
+        <div class="logo">pazTh7</div>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#projeto">Projeto</a>
+            <a href="#exemplos">Exemplos</a>
+            <a href="#github">GitHub</a>
+        </nav>
+    </header>
+
+    <!-- CONTEÚDO -->
+    <main>
+
+        <!-- INÍCIO -->
+        <section class="hero" id="inicio">
+
+            <h1>Olá, <span>pazTh7!</span></h1>
+
+            <p>
+                Este é um projeto do Th em HTML,
+                desenvolvido para aprender HTML, CSS e JavaScript.
+            </p>
+
+            <!-- PESQUISA -->
+            <div class="search">
+                <input
+                    type="text"
+                    id="pesquisa"
+                    placeholder="Pesquisar no projeto..."
+                >
+
+                <button onclick="pesquisar()">
+                    Pesquisar
+                </button>
+            </div>
+
+            <!-- BOTÕES -->
+            <div class="buttons">
+
+                <a
+                    class="btn primary"
+                    href="https://github.com/Thales1301"
+                    target="_blank"
+                >
+                    Ver GitHub
+                </a>
+
+                <a
+                    class="btn secondary"
+                    href="#projeto"
+                >
+                    Conhecer projeto
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- CARDS -->
+        <section class="cards" id="projeto">
+
+            <div class="card">
+                <h2>HTML</h2>
+                <p>
+                    HTML é usado para criar a estrutura
+                    das páginas da internet.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>CSS</h2>
+                <p>
+                    CSS é utilizado para deixar o site
+                    bonito, organizado e responsivo.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>JavaScript</h2>
+                <p>
+                    JavaScript adiciona interatividade
+                    e funcionalidades ao site.
+                </p>
+            </div>
+
+        </section>
+
+        <!-- EXEMPLOS -->
+        <section class="content" id="exemplos">
+
+            <h2>Exemplos do projeto</h2>
+
+            <p>
+                Aqui estão alguns exemplos de elementos
+                aprendidos durante o desenvolvimento.
+            </p>
+
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Botões interativos</li>
+                <li>Links para outros sites</li>
+                <li>HTML + CSS + JavaScript</li>
+            </ul>
+
+        </section>
+
+        <!-- CÓDIGOS -->
+        <section class="content">
+
+            <h2>Entidades HTML</h2>
+
+            <p>
+                &lt; significa menor que
+            </p>
+
+            <p>
+                &gt; significa maior que
+            </p>
+
+            <p>
+                &amp; representa o símbolo &
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer id="github">
+        © 2026 pazTh7 — Projeto HTML
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        function pesquisar() {
+
+            const texto = document.getElementById("pesquisa").value;
+
+            if (texto.trim() === "") {
+                alert("Digite alguma coisa para pesquisar!");
+            } else {
+                alert("Você pesquisou por: " + texto);
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
+```
